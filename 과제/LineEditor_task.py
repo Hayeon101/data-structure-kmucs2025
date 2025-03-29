@@ -63,10 +63,10 @@ class LineEditor(ArrayList):
         with open(self.file, 'r') as f:
             self.size = 0
             while True:
-                line = f.readline().strip()
+                line = f.readline()
                 if not line:
                     break
-                self.insert(self.size, line.strip())
+                self.insert(self.size, line.strip('\n'))
                 # self.size += 1
         
     def save_file(self):
