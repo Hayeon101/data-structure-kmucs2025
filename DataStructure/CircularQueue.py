@@ -37,7 +37,7 @@ class CircularQueue:
 
         while i != self.rear:
             i = (i + 1) % self.capacity
-            print(f"[{self.array[i]}] ", end="")
+            print("[%c] " % self.array[i], end="")
         print()
 
 if __name__ == '__main__':
