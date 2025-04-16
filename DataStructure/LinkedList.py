@@ -48,7 +48,23 @@ class ListType:
             print('Underflow.')
 
     def delete(self, pos):
-        pass
+        if pos <= 0 or pos > self.size:
+            print('Invalid Pos.')
+            return
+
+        if not self.isEmpty():
+            if pos == 1:
+                return self.deleteFirst()
+            else:
+                q = self.getNode(pos)
+                p = q.next
+
+                q.next = p.next
+                self.size -= 1
+
+                return p.data
+        else:
+            print('Underflow.')
 
     def printList(self):
         p = self.head
@@ -70,3 +86,4 @@ if __name__ == '__main__':
     L.insert(2,'E'); L.printList()
 
     print('[%c] is deleted.' % L.deleteFirst()); L.printList()
+    print('[%c] is deleted.' % L.delete(3)); L.printList()
