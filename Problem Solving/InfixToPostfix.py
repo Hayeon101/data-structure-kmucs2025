@@ -2,7 +2,7 @@ from DataStructure.ArrayStack import ArrayStack
 
 def order(op):
     if (op == '(' or op == ')'): return 0
-    elif (op == '*' or op == '/'): return 1
+    elif (op == '+' or op == '-'): return 1
     else: return 2
 
 def infixToPostfix(expr):
