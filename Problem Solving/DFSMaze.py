@@ -18,9 +18,6 @@ def isValidPos(r, c):
 
     return False
 
-for i in range(1,10,2):
-    print(i)
-
 def DFS():
     print('DFS : ')
     S = ArrayStack()

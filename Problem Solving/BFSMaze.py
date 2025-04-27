@@ -36,7 +36,10 @@ def BFS():
             if isValidPos(r, c-1): Q.enqueue((r, c-1))
             if isValidPos(r, c+1): Q.enqueue((r, c+1))
 
-        print(Q.array[Q.front+1:Q.rear+1])
+        if Q.front < Q.rear:
+            print(Q.array[Q.front+1:Q.rear+1])
+        else:
+            print(Q.array[Q.front + 1:Q.capacity] + Q.array[0:Q.rear + 1])
 
     return False
 
