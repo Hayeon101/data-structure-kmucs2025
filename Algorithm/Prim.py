@@ -1,5 +1,3 @@
-from fcntl import FASYNC
-
 Graph = {
     'A':[('B', 29), ('F', 10)],
     'B':[('A', 29), ('C', 16), ('G', 15)],
