@@ -18,15 +18,15 @@ class BinaryTree:
 
     def inOrder(self, root):
         if root != None:
-            print(f"[{root.data}] ", end='')
             self.inOrder(root.left)
+            print(f"[{root.data}] ", end='')
             self.inOrder(root.right)
 
     def postOrder(self, root):
         if root != None:
-            print(f"[{root.data}] ", end='')
             self.postOrder(root.left)
             self.postOrder(root.right)
+            print(f"[{root.data}] ", end='')
 
     def levelOrder(self, root):
         Q = queue.Queue()
