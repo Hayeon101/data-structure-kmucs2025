@@ -54,7 +54,7 @@ class BinaryTree:
         else:
             if self.isExternal(root):
                 return 1
-            return self.nodeCount(root.left) + self.nodeCount(root.right)
+            return self.leafNodeCount(root.left) + self.leafNodeCount(root.right)
 
     def isExternal(self, root):
         return root.left == None and root.right == None
